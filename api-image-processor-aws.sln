@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api-image-processor-aws", "api-image-processor-aws\api-image-processor-aws.csproj", "{0676A673-A140-4474-B128-F883409A9450}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api-image-processor-aws", "api-image-processor-aws.csproj", "{0676A673-A140-4474-B128-F883409A9450}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

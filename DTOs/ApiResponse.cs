@@ -10,5 +10,5 @@ public class ApiResponse<T>
         => new ApiResponse<T> { IsSuccess = true, Message = message,  Data = data ?? new { } };
 
     public static ApiResponse<T> Fail(string message)
-        => new ApiResponse<T> { IsSuccess = false, Message = message, Data = new { } };
+        => new ApiResponse<T> { IsSuccess = false, Message = message};
 }

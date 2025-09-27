@@ -3,5 +3,5 @@
 public class S3Options
 {
     public string BucketName { get; set; } = "";
-    public string? BasePath { get; set; } = "uploads";
+    public string? BasePath { get; set; } = "";
 }

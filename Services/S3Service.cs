@@ -60,4 +60,13 @@ public class S3Service : IS3Service
             LastModified = o.LastModified
         });
     }
+    
+    public async Task DeleteAsync(string key)
+    {
+        await _s3.DeleteObjectAsync(new DeleteObjectRequest
+        {
+            BucketName = _options.BucketName,
+            Key = key
+        });
+    }
 }
