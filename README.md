@@ -21,6 +21,7 @@ The S3 bucket name and base path are defined in **`appsettings.json`**:
   "BucketName": "your-bucket-name",
   "BasePath": "uploads"
 }
+```
 
 ## Run locally
 ```bash
