@@ -22,6 +22,9 @@ builder.Services.AddScoped<IS3Service, S3Service>();
 builder.Services.AddAWSService<IAmazonSQS>();
 builder.Services.Configure<SqsOptions>(builder.Configuration.GetSection("SQS"));
 builder.Services.AddScoped<ISqsService, SqsService>();
+// AWS services
+
+builder.Services.AddScoped<IFileValidator, FileValidator>();
 
 var app = builder.Build();
 
