@@ -1,0 +1,6 @@
+@api_image_processor_aws_HostAddress = http://localhost:5193
+
+GET {{api_image_processor_aws_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
