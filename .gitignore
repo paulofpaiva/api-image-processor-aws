@@ -3,3 +3,19 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+
+# Rider / IntelliJ
+.idea/
+*.sln.iml
+*.DotSettings
+*.DotSettings.user
+
+# User-specific files
+*.user
+*.vs/
+
+# Logs
+*.log
+
+# Docker
+*.pid
