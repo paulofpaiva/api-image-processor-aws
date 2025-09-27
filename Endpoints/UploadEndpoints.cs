@@ -11,8 +11,8 @@ public static class UploadEndpoints
     {
         app.MapPost("/upload", async (
                 [FromForm] IFormFile file, 
-                IFileValidator validator,
-                IFileOrchestratorService orchestrator
+                [FromServices] IFileValidator validator,
+                [FromServices] IFileOrchestratorService orchestrator
             ) =>
             {
                 validator.Validate(file);
