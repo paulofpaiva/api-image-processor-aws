@@ -13,6 +13,15 @@ Includes basic endpoints to **upload**, **list**, and **download** files.
 - .NET 9 SDK
 - AWS S3 bucket + IAM user with permissions (`s3:PutObject`, `s3:GetObject`, `s3:ListBucket`)
 
+## Configuration
+The S3 bucket name and base path are defined in **`appsettings.json`**:
+
+```json
+"S3": {
+  "BucketName": "your-bucket-name",
+  "BasePath": "uploads"
+}
+
 ## Run locally
 ```bash
 dotnet restore
