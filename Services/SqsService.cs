@@ -9,11 +9,13 @@ public class SqsService : ISqsService
 {
     private readonly IAmazonSQS _sqs;
     private readonly SqsOptions _options;
+    private readonly S3Options _s3Options;
 
-    public SqsService(IAmazonSQS sqs, IOptions<SqsOptions> options)
+    public SqsService(IAmazonSQS sqs, IOptions<SqsOptions> options,  IOptions<S3Options> s3Options)
     {
         _sqs = sqs;
         _options = options.Value;
+        _s3Options = s3Options.Value;
     }
     
     public async Task<SendMessageResponse> SendMessageAsync(object message)
@@ -23,7 +25,9 @@ public class SqsService : ISqsService
         var request = new SendMessageRequest
         {
             QueueUrl = _options.QueueUrl,
-            MessageBody = body
+            MessageBody = body,
+            MessageGroupId = _s3Options.BasePath ?? "default",
+            MessageDeduplicationId = Guid.NewGuid().ToString()
         };
 
         return await _sqs.SendMessageAsync(request);
